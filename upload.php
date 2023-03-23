@@ -25,9 +25,13 @@
 
     <!-- info for upload -->
     <div class="UploadInputs">
-      <input class="InputUpload" type="text" maxlength="30" placeholder="title">
-      <input class="InputUpload" type="text" maxlength="300" placeholder="description">
-      <input class="InputUpload" type="text" maxlength="30" placeholder="code language">
+    <div class="search">
+      <div class="InputUpload">
+                <input class="Searchbar" type="text" maxlength="30" placeholder="title..."></input>
+                <input class="Searchbar" type="text" maxlength="300" placeholder="description..."></input>
+                <input class="Searchbar" type="text" maxlength="30" placeholder="code language..."></input>
+      </div>
+            </div>
 
       <!-- code input -->
       <div class="d-flex">
