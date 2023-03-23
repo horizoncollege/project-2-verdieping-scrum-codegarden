@@ -14,17 +14,14 @@
 <body>
     <!-- VRAGEN OF OPMERKINGEN & BUTTON -->
     <div class=container>
-        <h3 class="text-center d-flex justify-content-center font-weight-bold" style="color: #6FCA3A; margin-top: 50px; margin-bottom: 10px">Vragen of opmerkingen? </h3>
+        <h3 class="text-center d-flex justify-content-center font-weight-bold" style="color: #6FCA3A; margin-top: 50px; margin-bottom: 10px">Questions or remarks? </h3>
         <div class="d-flex justify-content-center text-center">
-            <h6 class="col-lg-6 text-black font-weight-bold" style="margin-bottom: 15px">Bel ons of stuur een email naar codegardenservice@gmail.com</h6>
+            <h6 class="col-lg-6 text-black font-weight-bold" style="margin-bottom: 15px">Call or send us an e-mail</h6>
         </div>
         <div class="search">
-                <a href="Contact.php" class="ShareUpload" alt="NEEM CONTACT OP">
-                    <i>N</i>
-                    <i>E</i>
-                    <i>E</i>
-                    <i>M</i>
-                    <i>&nbsp;</i>
+                <a href="Contact.php" class="ShareUpload" alt="CONTACT US">
+                    
+                    
                     <i>C</i>
                     <i>O</i>
                     <i>N</i>
@@ -33,8 +30,8 @@
                     <i>C</i>
                     <i>T</i>
                     <i>&nbsp;</i>
-                    <i>O</i>
-                    <i>P</i>
+                    <i>U</i>
+                    <i>S</i>
                 </a>
             </div>
             <br>

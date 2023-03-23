@@ -49,40 +49,7 @@
             </div>
         </div>
 
-        <!-- Your recent projects -->
-
-        <h3 class="recent"> Your recent projects </h3>
-
-        <!-- Recent projects table -->
-
-        <div class="container" style="border-radius: 20px; background-color: #04A118; margin-bottom: 50px; max-width: 750px">
-            <table class="table" style="color: white; font-weight: 900;">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Language</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Project 1</td>
-                        <td>HTML/CSS</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Project 2</td>
-                        <td>HTML/CSS</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Project 3</td>
-                        <td>PHP</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        
         <!-- contactlink -->
         <?php include("contactlink.php"); ?>
     </div>

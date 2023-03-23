@@ -28,7 +28,7 @@
     <div class="search">
       <div class="InputUpload">
                 <input class="Searchbar" type="text" maxlength="30" placeholder="title..."></input>
-                <input class="Searchbar" type="text" maxlength="300" placeholder="description..."></input>
+                <textarea class="Searchbar" style="width: 400px; height: 150px;" type="text" maxlength="10000" placeholder="description..."></textarea>
                 <input class="Searchbar" type="text" maxlength="30" placeholder="code language..."></input>
       </div>
             </div>

@@ -8,7 +8,7 @@
 
         <!-- contact in de footer. met  -->
         <li><a class="mail" href="mailto:zakelijk.ctab@gmail.com">codegardenservice@gmail.com</a></li>
-        <li class="ContactMeer"><p>Voor meer opties ga naar de contactpagina:</p>
+        <li class="ContactMeer"><p>For more options go to the contact page:</p>
         <p class="space">...</p>
         <a class="contactknop" href="contact.php" target="_blank">Contact</a></li>
         
