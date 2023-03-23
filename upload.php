@@ -34,7 +34,7 @@
         <textarea class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100"></textarea>
       </div>
 
-
+<br>
       <button>
         <div class="svg-wrapper-1">
           <div class="svg-wrapper">

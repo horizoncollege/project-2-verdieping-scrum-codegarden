@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -27,10 +28,24 @@
                 <input class="Searchbar" type="text" placeholder="Search..."></input>
             </div>
             <div class="search">
-                <a class="indexknop btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: #D6D6D6; margin-bottom: 10px; width:427px;" href="upload.php" role="button">Upload</a>
+                <a href="Upload.php" class="ShareUpload" alt="UPLOAD">
+                    <i>U</i>
+                    <i>P</i>
+                    <i>L</i>
+                    <i>O</i>
+                    <i>A</i>
+                    <i>D</i>
+                </a>
             </div>
+            
             <div class="search">
-                <a class="indexknop btn btn-outline-black btn-lg text-blac font-weight-bold" style="background-color: #D6D6D6; margin-bottom: 20x; width:427px;" href="share.php" role="button">Share</a>
+                <a href="share.php" class="ShareUpload" alt="SHARE">
+                    <i>S</i>
+                    <i>H</i>
+                    <i>A</i>
+                    <i>R</i>
+                    <i>E</i>
+                </a>
             </div>
         </div>
 

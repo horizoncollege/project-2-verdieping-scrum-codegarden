@@ -12,7 +12,6 @@
     <title>Navbar</title>
 
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-green" id="headerNav">
         <div class="container-fluid">
