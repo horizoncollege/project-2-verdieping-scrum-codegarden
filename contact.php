@@ -24,10 +24,10 @@
         <div class="container-fluid" style="margin-bottom: 25px">
             <h3 class="recent"> Contact </h3>
             <div class="search">
-                <a class="btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: rgb(192,192,192); margin-bottom: 10px; width:427px;" href="mailto:169357@student.horizoncollege.nl" target="_blank">codegardenservice@gmail.com</a>
+                <a class="ShareUpload" href="mailto:169357@student.horizoncollege.nl" target="_blank">codegardenservice@gmail.com</a>
             </div>
             <div class="search">
-                <a class="btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: rgb(192,192,192); margin-bottom: 10px; width:427px;" href="tel:0618920693" target="_blank">06 12 34 56 78</a>
+                <a class="ShareUpload" href="tel:0618920693" target="_blank">06 12 34 56 78</a>
             </div>
         </div>
     </div>
