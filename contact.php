@@ -24,7 +24,35 @@
         <div class="container-fluid" style="margin-bottom: 25px">
             <h3 class="recent"> Contact </h3>
             <div class="search">
-                <a class="ShareUpload" href="mailto:169357@student.horizoncollege.nl" target="_blank">codegardenservice@gmail.com</a>
+                <a class="ShareUpload" href="mailto:169357@student.horizoncollege.nl" target="_blank" alt="CODEGRADENSERVICE@GMAIL.COM">
+                    <i>C</i>
+                    <i>O</i>
+                    <i>D</i>
+                    <i>E</i>
+                    <i>G</i>
+                    <i>A</i>
+                    <i>R</i>
+                    <i>D</i>
+                    <i>E</i>
+                    <i>N</i>
+                    <i>S</i>
+                    <i>E</i>
+                    <i>R</i>
+                    <i>V</i>
+                    <i>I</i>
+                    <i>C</i>
+                    <i>E</i>
+                    <i>@</i>
+                    <i>G</i>
+                    <i>M</i>
+                    <i>A</i>
+                    <i>I</i>
+                    <i>L</i>
+                    <i>.</i>
+                    <i>C</i>
+                    <i>O</i>
+                    <i>M</i>
+                </a>
             </div>
             <div class="search">
                 <a class="ShareUpload" href="tel:0618920693" target="_blank">06 12 34 56 78</a>
