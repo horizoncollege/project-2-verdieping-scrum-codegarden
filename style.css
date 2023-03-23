@@ -100,6 +100,10 @@ h2 {
     color: white;
 }
 
+.Searchbar:focus {
+    outline: none;
+}
+
 .ShareUpload{
     text-decoration: none;
     color: white;
@@ -158,6 +162,7 @@ h2 {
    }
    
    .ShareUpload:hover i {
+    outline: none;
     transition: all .2s ease;
     transform: translateY(0px);
     opacity: 1;

@@ -72,8 +72,10 @@
                     <i>8</i>
                 </a>
             </div>
-        </div>
+        </div><br>
+    <br>
     </div>
+    
     <?php include("footer.php"); ?>
 </body>
 
