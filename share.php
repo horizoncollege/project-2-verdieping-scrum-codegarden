@@ -25,9 +25,11 @@
         <div class="container-fluid" style="margin-bottom: 25px">
             <h3 class="recent"> Your link </h3>
             <div class="search">
-                <a class="btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: rgb(192,192,192); margin-bottom: 10px; width:427px;">http://.........</a>
+                <input class="Searchbar" type="text" placeholder="http://........."></input>
             </div>
         </div>
+
+        
 
         <!-- Button -->
         <button>
