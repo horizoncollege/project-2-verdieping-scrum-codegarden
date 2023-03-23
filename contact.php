@@ -30,9 +30,6 @@
                 <a class="btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: rgb(192,192,192); margin-bottom: 10px; width:427px;" href="tel:0618920693" target="_blank">06 12 34 56 78</a>
             </div>
         </div>
-
-        <!-- contactlink -->
-        <?php include("contactlink.php"); ?>
     </div>
     <?php include("footer.php"); ?>
 </body>
