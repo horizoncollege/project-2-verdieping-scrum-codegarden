@@ -25,7 +25,7 @@
         <div class="container-fluid" style="margin-bottom: 25px">
             <h3 class="recent"> Your link </h3>
             <div class="search">
-                <input class="Searchbar" type="text" placeholder="http://........."></input>
+                <input class="Searchbar" type="text" placeholder="http://........." disabled></input>
             </div>
         </div>
 
