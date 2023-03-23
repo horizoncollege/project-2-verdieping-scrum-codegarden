@@ -55,7 +55,7 @@
                 </a>
             </div>
             <div class="search">
-                <a class="ShareUpload" href="tel:0618920693" target="_blank" style="font-weight: bold;" alt="06 12 34 56 78">
+                <a class="ShareUpload" href="tel:0618920693" style="font-weight: bold;" alt="06 12 34 56 78">
                     <i>0</i>
                     <i>6</i>
                     <i>&nbsp;</i>
