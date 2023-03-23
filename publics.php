@@ -125,7 +125,6 @@
             </div>
 
         </div>
-        <?php include("Contactlink.php"); ?>
     </div>
 
     </div>
