@@ -18,9 +18,26 @@
         <div class="d-flex justify-content-center text-center">
             <h6 class="col-lg-6 text-black font-weight-bold" style="margin-bottom: 15px">Bel ons of stuur een email naar codegardenservice@gmail.com</h6>
         </div>
-        <div class="text-center">
-                <a class="btn btn-outline-black btn-lg text-black font-weight-bold" style="background-color: rgb(192,192,192); margin-bottom: 50px; width:200px;" href="contact.php" target="_blank" class="btn btn-primary">Neem contact op</a>
+        <div class="search">
+                <a href="Contact.php" class="ShareUpload" alt="NEEM CONTACT OP">
+                    <i>N</i>
+                    <i>E</i>
+                    <i>E</i>
+                    <i>M</i>
+                    <i>&nbsp;</i>
+                    <i>C</i>
+                    <i>O</i>
+                    <i>N</i>
+                    <i>T</i>
+                    <i>A</i>
+                    <i>C</i>
+                    <i>T</i>
+                    <i>&nbsp;</i>
+                    <i>O</i>
+                    <i>P</i>
+                </a>
             </div>
+            <br>
     </div>
     <!-- VRAGEN OF OPMERKINGEN & BUTTON -->
 </body>
