@@ -48,6 +48,20 @@ CREATE TABLE `public` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `users`
+--
+
+DROP TABLE IF EXISTS `users`
+
+CREATE TABLE `users` (
+  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `username` VARCHAR(30) NOT NULL,
+  `password` VARCHAR(30) NOT NULL
+)
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

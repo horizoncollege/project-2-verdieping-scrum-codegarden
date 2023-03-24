@@ -25,20 +25,27 @@
 
     <!-- info for upload -->
     <div class="UploadInputs">
-    <div class="search">
-      <div class="InputUpload">
-                <input class="Searchbar" type="text" maxlength="30" placeholder="title..."></input>
-                <textarea class="Searchbar" style="width: 400px; height: 150px;" type="text" maxlength="10000" placeholder="description..."></textarea>
-                <input class="Searchbar" type="text" maxlength="30" placeholder="code language..."></input>
+      <div class="search">
+        <div class="InputUpload">
+          <input class="Searchbar" type="text" maxlength="30" placeholder="title..."></input>
+          <select class="Searchbar">
+            <option disabled selected>code language</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="PHP">PHP</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="MySQL">MySQL</option>
+          </select>
+          <textarea class="Searchbar" style="width: 600px; height: 150px; resize:vertical; max-height:750px;" type="text" maxlength="2000" placeholder="description..."></textarea>
+        </div>
       </div>
-            </div>
 
       <!-- code input -->
       <div class="d-flex">
         <textarea class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100"></textarea>
       </div>
 
-<br>
+      <br>
       <button>
         <div class="svg-wrapper-1">
           <div class="svg-wrapper">

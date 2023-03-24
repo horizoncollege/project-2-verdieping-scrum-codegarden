@@ -93,7 +93,7 @@ input {
     background-color: #04A118;
     border: none;
     border-radius: 12px;
-    width: 400px;
+    width: 600px;
     height: 50px;
     margin-bottom: 10px;
     color: white;
@@ -114,7 +114,7 @@ input {
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 400px;
+    width: 600px;
     position: relative;
     padding: 0 20px;
     font-size: 18px;
