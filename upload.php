@@ -25,41 +25,46 @@
 
     <!-- info for upload -->
     <div class="UploadInputs">
-      <div class="search">
-        <div class="InputUpload">
-          <input class="Searchbar" type="text" maxlength="30" placeholder="title..."></input>
-          <select class="Searchbar">
-            <option disabled selected>code language</option>
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="PHP">PHP</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="MySQL">MySQL</option>
-          </select>
-          <textarea class="Searchbar" style="width: 600px; height: 150px; resize:vertical; max-height:750px;" type="text" maxlength="2000" placeholder="description..."></textarea>
-        </div>
-      </div>
+      <form>
+        <div class="search">
+          <div class="InputUpload">
 
-      <!-- code input -->
-      <div class="d-flex">
-        <textarea class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100"></textarea>
-      </div>
+            <input class="Searchbar" type="text" id="title" maxlength="30" placeholder="title..." required></input>
 
-      <br>
-      <button>
-        <div class="svg-wrapper-1">
-          <div class="svg-wrapper">
-            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
-            </svg>
+            <select class="Searchbar" name="language" id="language" required>
+              <option value="" disabled selected>code language</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="PHP">PHP</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="MySQL">MySQL</option>
+            </select>
+
+            <textarea class="Searchbar" id="description" style="width: 600px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
+
           </div>
         </div>
-        <span>Upload</span>
-      </button>
 
+        <!-- code input -->
+        <div class="d-flex">
+          <textarea class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100" required></textarea>
+        </div>
+
+        <br>
+        <button>
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg height="24" width="24" viewBox="0 0 24 24">
+                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Upload</span>
+        </button>
+      </form>
     </div>
   </div>
+  
   <!-- print footer -->
   <?php include("footer.php"); ?>
 
