@@ -44,7 +44,7 @@
             </select>
 
             <!-- textarea for description -->
-            <textarea class="Searchbar" id="Description" name="Description" style="width: 600px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
+            <textarea class="Searchbar" id="Description" name="Description" style="width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
 
           </div>
         </div>
