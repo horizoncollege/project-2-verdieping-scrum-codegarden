@@ -12,7 +12,22 @@
 </head>
 
 <body>
-    <!-- navbar -->
+    <!-- Generates link -->
+    <?php
+    // Define an array of possible characters for the link
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+    // Generate a random link if the button is pressed
+    if (isset($_POST['generate_link'])) {
+        // Generate a 10-character random string
+        $link = '';
+        for ($i = 0; $i < 10; $i++) {
+            $link .= $chars[rand(0, strlen($chars) - 1)];
+        }
+    }
+    ?>
+
+    <!-- Navbar -->
     <?php include("navbar.php"); ?>
 
     <div class="body2">
@@ -22,29 +37,43 @@
         </div>
 
         <!-- Your link -->
-        <div class="container-fluid" style="margin-bottom: 25px">
+        <div class="container" style="margin-bottom: 25px">
             <h3 class="recent"> Your link </h3>
             <div class="search">
-                <input class="Searchbar" type="text" placeholder="http://........." disabled></input>
+                <input class="Searchbar" type="text" placeholder="<?php echo 'http://codegarden.com?id=' . $link . ''; ?>" disabled></input>
             </div>
         </div>
 
-        
-
-        <!-- Button -->
-        <button>
-            <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
-                    </svg>
+        <!-- Buttons -->
+        <div class="text-center d-flex justify-content-center">
+            <button style="margin-right: 10px;">
+                <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <span>Copy</span>
-        </button>
+                <span>Copy</span>
+            </button>
+
+            <form method="POST">
+                <button type="submit" name="generate_link" style="margin-left: 10px">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Generate link</span>
+                </button>
+            </form>
+        </div>
     </div>
-    </div>
+
     <!-- footer -->
     <?php include("footer.php"); ?>
 </body>
