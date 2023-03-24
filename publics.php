@@ -123,11 +123,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <!-- contactlink -->
+        <?php include("contactlink.php"); ?>
     </div>
 
-    </div>
+
 
 
     <!-- Optional JavaScript -->
