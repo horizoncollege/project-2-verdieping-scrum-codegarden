@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 21 mrt 2023 om 11:47
+-- Gegenereerd op: 24 mrt 2023 om 09:44
 -- Serverversie: 10.4.27-MariaDB
 -- PHP-versie: 8.2.0
 
@@ -46,7 +46,6 @@ CREATE TABLE `public` (
   `Language` varchar(30) NOT NULL,
   `Code` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-COMMIT;
 
 -- --------------------------------------------------------
 
@@ -57,10 +56,31 @@ COMMIT;
 DROP TABLE IF EXISTS `users`
 
 CREATE TABLE `users` (
-  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `username` VARCHAR(30) NOT NULL,
-  `password` VARCHAR(30) NOT NULL
-)
+  `id` mediumint(9) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexen voor geëxporteerde tabellen
+--
+
+--
+-- Indexen voor tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT voor geëxporteerde tabellen
+--
+
+--
+-- AUTO_INCREMENT voor een tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
