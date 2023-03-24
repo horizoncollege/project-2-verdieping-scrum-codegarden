@@ -294,6 +294,13 @@ input {
 
 /* Upload */
 
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .UploadInputs {
     display: flex;
     justify-content: center;
