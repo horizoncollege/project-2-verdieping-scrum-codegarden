@@ -40,13 +40,28 @@
         <div class="container" style="margin-bottom: 25px">
             <h3 class="recent"> Your link </h3>
             <div class="search">
-                <input class="Searchbar" type="text" placeholder="<?php echo 'http://codegarden.com?id=' . $link . ''; ?>" disabled></input>
+                <div class="Searchbar">
+                    <p name="link"><?php echo 'http://codegarden.com?id=' . $link . ''; ?></p>
+                </div>
             </div>
         </div>
 
-        <!-- Buttons -->
-        <div class="text-center d-flex justify-content-center">
-            <button style="margin-right: 10px;">
+        <!-- Button Copy Link -->
+        <button id="copy-button" style="margin-right: 10px;">
+            <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </div>
+            <span>Copy</span>
+        </button>
+
+        <!-- Button Generate Link -->
+        <form method="POST">
+            <button type="submit" name="generate_link" style="margin-left: 10px">
                 <div class="svg-wrapper-1">
                     <div class="svg-wrapper">
                         <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -55,27 +70,31 @@
                         </svg>
                     </div>
                 </div>
-                <span>Copy</span>
+                <span>Generate link</span>
             </button>
-
-            <form method="POST">
-                <button type="submit" name="generate_link" style="margin-left: 10px">
-                    <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <span>Generate link</span>
-                </button>
-            </form>
-        </div>
+        </form>
+    </div>
     </div>
 
     <!-- footer -->
     <?php include("footer.php"); ?>
+
+    <!-- Javascript Copy Link -->
+    <script>
+        const copyBtn = document.querySelector('#copy-button');
+        copyBtn.addEventListener('click', () => {
+            const linkInput = document.querySelector('p[name="link"]');
+            const linkText = linkInput.textContent;
+            navigator.clipboard.writeText(linkText)
+                .then(() => {
+                    console.log('Link copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy link: ', err);
+                });
+        });
+    </script>
+
 </body>
 
 </html>
