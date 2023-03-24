@@ -41,6 +41,9 @@
                     <li class="nav-item">
                         <a class="nav-link mx-2 active" href="contact.php">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="login.php">Log in</a>
+                    </li>
                 </ul>
             </div>
         </div>
