@@ -108,14 +108,16 @@ input:checked + .slider:before {
         </select>
 
         <!-- textarea for description -->
-        <textarea class="Searchbar" id="Description" name="Description" style="width: 600px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
+        <textarea class="Searchbar" id="Description" name="Description" style="width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
 
       </div>
     </div>
+
     <!-- textarea for code input required-->
     <div class="d-flex">
       <textarea id="Code" name="Code" class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100" required></textarea>
     </div>
+
                 <br>
                 <div class="search">
                     <a href="Upload.php" class="ShareUpload" alt="SAVE">
