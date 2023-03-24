@@ -112,10 +112,12 @@ input:checked + .slider:before {
 
       </div>
     </div>
+
     <!-- textarea for code input required-->
     <div class="d-flex">
       <textarea id="Code" name="Code" class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100" required></textarea>
     </div>
+
                 <br>
                 <div class="search">
                     <a href="Upload.php" class="ShareUpload" alt="SAVE">
