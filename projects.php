@@ -29,7 +29,7 @@
                 <h2>Project 1</h2>
                 <div class="container">
                     <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
+                        
                     </a>
                     <div class="UploadInputs">
                         <input class="UploadBut" type="button" style="width:100px" value="Open">
@@ -37,41 +37,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3">
-                <h2>Project 2</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Project 3</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Project 4</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
         <div class="row mt-4">
@@ -80,43 +46,7 @@
                 <h2>Project 5</h2>
                 <div class="container">
                     <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Project 6</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Project 7</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <h2>Project 8</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
+                        
                     </a>
                     <div class="UploadInputs">
                         <input class="UploadBut" type="button" style="width:100px" value="Open">
