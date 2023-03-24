@@ -24,14 +24,17 @@
     <h1 class="recent">Upload code</h1>
 
     <!-- info for upload -->
+    <!-- inputs for upload -->
     <div class="UploadInputs">
-      <form>
+      <!-- connecting to insert.php -->
+      <form action="insert.php" method="POST">
         <div class="search">
           <div class="InputUpload">
 
-            <input class="Searchbar" type="text" id="title" maxlength="30" placeholder="title..." required></input>
+            <input id="Title" name="Title" class="Searchbar" type="text"  maxlength="30" placeholder="title..." required></input>
 
-            <select class="Searchbar" name="language" id="language" required>
+            <!-- dropdown menu for code language required-->
+            <select class="Searchbar" name="Language" id="Language" required>
               <option value="" disabled selected>code language</option>
               <option value="HTML">HTML</option>
               <option value="CSS">CSS</option>
@@ -40,17 +43,19 @@
               <option value="MySQL">MySQL</option>
             </select>
 
-            <textarea class="Searchbar" id="description" style="width: 600px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
+            <!-- textarea for description -->
+            <textarea class="Searchbar" id="Description" name="Description" style="width: 600px; height: 150px; resize:vertical; max-height:750px; min-height:150px;" type="text" maxlength="2000" placeholder="description..."></textarea>
 
           </div>
         </div>
 
-        <!-- code input -->
+        <!-- textarea for code input required-->
         <div class="d-flex">
-          <textarea class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100" required></textarea>
+          <textarea id="Code" name="Code" class="form-control flex-grow-1" style="background-color:#282a3a; color:white;" spellcheck="false" rows="15" cols="100" required></textarea>
         </div>
 
         <br>
+        <!-- send button -->
         <button>
           <div class="svg-wrapper-1">
             <div class="svg-wrapper">
@@ -64,7 +69,7 @@
       </form>
     </div>
   </div>
-  
+
   <!-- print footer -->
   <?php include("footer.php"); ?>
 

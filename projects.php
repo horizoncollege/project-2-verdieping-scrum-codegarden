@@ -28,8 +28,8 @@
             <div class="col-sm-3">
                 <h2>Project 1</h2>
                 <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        
+                    <a href="projectopen.php" target="_blank">
+                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
                     </a>
                     <div class="UploadInputs">
                         <input class="UploadBut" type="button" style="width:100px" value="Open">
@@ -37,22 +37,6 @@
                 </div>
             </div>
 
-            
-
-        </div>
-        <div class="row mt-4">
-
-            <div class="col-sm-3">
-                <h2>Project 5</h2>
-                <div class="container">
-                    <a href="linknaarproject" target="_blank">
-                        
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- contactlink -->
         <?php include("contactlink.php"); ?>
