@@ -19,10 +19,11 @@
             <img src="pictures/codegardensmall.png" class="rounded mx-auto d-block img-fluid" style="width:500px; height: auto; margin-top: 80px; margin-bottom: 80px;" alt="fulllogo">
         </div>
         <div class="container">
+            <h3 class="text-center d-flex justify-content-center font-weight-bold" style="color: #6FCA3A; margin-top: 50px; margin-bottom: 10px">Log in </h3>
             <form>
-                <!-- Email input -->
+                <!-- Username input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example1">Email address</label>
+                    <label class="form-label" for="form2Example1">Username</label>
                     <input type="email" id="form2Example1" class="form-control" />
                 </div>
 
@@ -35,9 +36,10 @@
                 <!-- Submit button -->
                 <button type="button" class="btn btn-success btn-block mb-4">Sign in</button>
 
-                <!-- Register buttons -->
+                <!-- Register & Back buttons -->
                 <div class="text-center">
                     <p>Not a member? <a class="text-success" href="register.php">Register</a></p>
+                    <p>Not what you're looking for? <a class="text-success" href="index.php">Return to Homepage</a></p>
                 </div>
             </form>
         </div>
