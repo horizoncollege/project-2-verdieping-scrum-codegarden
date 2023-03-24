@@ -22,19 +22,25 @@
             <h3 class="text-center d-flex justify-content-center font-weight-bold" style="color: #6FCA3A; margin-top: 50px; margin-bottom: 10px">Log in </h3>
             <form>
                 <!-- Username input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example1">Username</label>
-                    <input type="email" id="form2Example1" class="form-control" />
+                <div class="text-center d-flex justify-content-center">
+                    <div class="form-outline mb-4 text-center">
+                        <label class="form-label" for="form2Example1">Username</label>
+                        <input type="email" id="form2Example1" class="form-control" style="width: 300px" />
+                    </div>
                 </div>
 
                 <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example2">Password</label>
-                    <input type="password" id="form2Example2" class="form-control" />
+                <div class="text-center d-flex justify-content-center">
+                    <div class="form-outline mb-4 text-center">
+                        <label class="form-label" for="form2Example2">Password</label>
+                        <input type="password" id="form2Example2" class="form-control" style="width: 300px" />
+                    </div>
                 </div>
 
                 <!-- Submit button -->
-                <button type="button" class="btn btn-success btn-block mb-4">Sign in</button>
+                <div class="text-center d-flex justify-content-center">
+                    <button type="button" class="btn btn-success btn-block mb-4" style="width: 150px">Submit</button>
+                </div>
 
                 <!-- Register & Back buttons -->
                 <div class="text-center">
