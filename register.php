@@ -46,6 +46,9 @@
                 <div class="text-center">
                     <p>Not what you're looking for? <a class="text-success" href="index.php">Return to Homepage</a></p>
                 </div>
+                <div class="text-center">
+                    <p>Already have an account? <a class="text-success" href="login.php">Log in</a></p>
+                </div>
             </form>
         </div>
     </div>
