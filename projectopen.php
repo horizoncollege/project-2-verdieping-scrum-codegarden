@@ -11,7 +11,7 @@
         <link class="img-fluid rounded-circle" rel="shortcut icon" type="logo/png" href="pictures/codegarden_logo.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <title>Upload</title>
+        <title>Edit</title>
     </head>
 
 <body>
@@ -86,7 +86,7 @@ input:checked + .slider:before {
 
     <div class="body2">
 
-<h1 class="recent">Upload code</h1>
+<h1 class="recent">Edit Project</h1>
 
 <!-- info for upload -->
 <!-- inputs for upload -->
