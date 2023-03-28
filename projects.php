@@ -12,8 +12,37 @@
 </head>
 
 <body>
+<?php
+    // start the session
+    session_start();
+
+    // check if the user is logged in
+    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+    } else {
+        // user is not logged in, redirect to login.php
+        echo "You are not logged in. Redirecting to login page...";
+        header("Location: login.php");
+        exit;
+    }
+
+    session_destroy();
+    ?>
     <!-- navbar -->
-    <?php include("navbar.php"); ?>
+    <?php include("navbar.php");
+
+    $servername = "localhost";
+    $username = "bit_academy";
+    $password = "bit_academy";
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=codegarden", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+
+    session_start(); ?>
     <div class="body2">
         <h1 class="recent"> Your projects </h1>
 
@@ -25,17 +54,32 @@
 
         <div class="row mt-4">
 
-            <div class="col-sm-3">
-                <h2>Project 1</h2>
-                <div class="container">
-                    <a href="projectopen.php">
-                        <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
-                    </a>
-                    <div class="UploadInputs">
-                        <input class="UploadBut" type="button" style="width:100px" value="Open">
-                    </div>
+            <?php
+
+            $title = "";
+
+            $sql = "SELECT * FROM private";
+            ?>
+
+            <h1>
+                <div class="col-sm-3">
+                    <?php
+                    foreach ($conn->query($sql) as $row) {
+                        $welk = $row['id'];
+                        echo "<div class='col-sm-3'>";
+                        echo "<div class='container'>";
+                        echo "<table style='display: flex; flex-direction:column;'>";
+                        echo $row['Title'] . "<br>" . PHP_EOL;
+                        echo $row['Language'] . "<br>" . PHP_EOL;
+                        echo "<textarea max-length='10'>" . $row['Description'] . "</textarea>" . PHP_EOL;
+                        echo "<a class='UploadBut' type='button' style='width:200px; height:auto; text-align:center;' value='Open' href='projectopen.php?id=$welk'>Open</a>";
+                        echo "</table>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                    ?>
                 </div>
-            </div>
+            </h1>
 
         </div>
         <!-- contactlink -->

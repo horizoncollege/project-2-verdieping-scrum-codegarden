@@ -1,5 +1,17 @@
 <?php
 
+// start the session
+session_start();
+
+// check if the user is logged in
+if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+} else {
+    // user is not logged in, redirect to login.php
+    echo "You are not logged in. Redirecting to login page...";
+    header("Location: login.php");
+    exit;
+}
+
 // getting the inputs from upload.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = isset($_POST['Title']) ? $_POST['Title'] : null;

@@ -12,6 +12,19 @@
 </head>
 
 <body>
+<?php
+    // start the session
+    session_start();
+
+    // check if the user is logged in
+    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+    } else {
+        // user is not logged in, redirect to login.php
+        echo "You are not logged in. Redirecting to login page...";
+        header("Location: login.php");
+        exit;
+    }
+    ?>
     <!-- Generates link -->
     <?php
     error_reporting(0);
