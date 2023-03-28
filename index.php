@@ -13,6 +13,21 @@
 </head>
 
 <body>
+
+    <?php
+    // start the session
+    session_start();
+
+    // check if the user is logged in
+    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+    } else {
+        // user is not logged in, redirect to login.php
+        echo "You are not logged in. Redirecting to login page...";
+        header("Location: login.php");
+        exit;
+    }
+    ?>
+
     <!-- NAVBAR -->
     <?php include("navbar.php"); ?>
     <div class="body2">
@@ -20,6 +35,7 @@
         <div class="container">
             <img src="pictures/codegardensmall.png" class="rounded mx-auto d-block img-fluid" style="width:500px; height: auto; margin-top: 80px; margin-bottom: 80px;" alt="fulllogo">
         </div>
+
 
         <!-- Search Upload Share -->
         <div class="container-fluid">
@@ -37,7 +53,7 @@
                     <i>D</i>
                 </a>
             </div>
-            
+
             <div class="search">
                 <a href="share.php" class="ShareUpload" alt="SHARE">
                     <i>S</i>
@@ -49,7 +65,7 @@
             </div>
         </div>
 
-        
+
         <!-- contactlink -->
         <?php include("contactlink.php"); ?>
     </div>

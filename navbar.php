@@ -42,7 +42,7 @@
                         <a class="nav-link mx-2 active" href="contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" href="login.php">Log in</a>
+                        <a class="nav-item mx-2 active" href="logout.php">Log out</a>
                     </li>
                 </ul>
             </div>
