@@ -127,19 +127,7 @@
         </div>
         <br>
         <div class="search">
-          <a class="ShareUpload" alt="PUBLIC ------ PRIVATE">
-            <i>P</i>
-            <i>U</i>
-            <i>B</i>
-            <i>L</i>
-            <i>I</i>
-            <i>C</i>
-            <i>&nbsp;</i>
-            <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider round"></span>
-            </label>
-            <i>&nbsp;</i>
+          <a class="ShareUpload" alt="PRIVATE ------ PUBLIC">
             <i>P</i>
             <i>R</i>
             <i>I</i>
@@ -147,6 +135,19 @@
             <i>A</i>
             <i>T</i>
             <I>E</i>
+            <i>&nbsp;</i>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+            <i>&nbsp;</i>
+            <i>&nbsp;</i>
+            <i>P</i>
+            <i>U</i>
+            <i>B</i>
+            <i>L</i>
+            <i>I</i>
+            <i>C</i>
           </a>
         </div>
         <br>
