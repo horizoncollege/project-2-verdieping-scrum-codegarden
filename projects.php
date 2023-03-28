@@ -28,7 +28,7 @@
             <div class="col-sm-3">
                 <h2>Project 1</h2>
                 <div class="container">
-                    <a href="projectopen.php" target="_blank">
+                    <a href="projectopen.php">
                         <img src="pictures/test2.png" alt="" class="img-thumbnail" width="300px">
                     </a>
                     <div class="UploadInputs">

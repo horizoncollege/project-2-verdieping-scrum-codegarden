@@ -14,6 +14,7 @@
 <body>
     <!-- Generates link -->
     <?php
+    error_reporting(0);
     // Define an array of possible characters for the link
     $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
