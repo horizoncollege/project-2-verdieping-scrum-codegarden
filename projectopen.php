@@ -16,7 +16,7 @@
 
 <body>
 <?php
-    // start the session
+    
     session_start();
 
     // check if the user is logged in

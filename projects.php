@@ -20,12 +20,10 @@
     if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     } else {
         // user is not logged in, redirect to login.php
-        echo "You are not logged in. Redirecting to login page...";
         header("Location: login.php");
         exit;
     }
 
-    session_destroy();
     ?>
     <!-- navbar -->
     <?php include("navbar.php");
@@ -41,8 +39,7 @@
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
-
-    session_start(); ?>
+ ?>
     <div class="body2">
         <h1 class="recent"> Your projects </h1>
 
