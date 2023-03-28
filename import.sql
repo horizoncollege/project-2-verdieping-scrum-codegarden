@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `private` (
+  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `Title` varchar(30) NOT NULL,
   `Description` varchar(300) NOT NULL,
   `Language` varchar(30) NOT NULL,
@@ -41,6 +42,7 @@ CREATE TABLE `private` (
 --
 
 CREATE TABLE `public` (
+  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `Title` varchar(30) NOT NULL,
   `Description` varchar(300) NOT NULL,
   `Language` varchar(30) NOT NULL,
