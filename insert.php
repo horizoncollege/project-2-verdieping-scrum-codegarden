@@ -45,7 +45,38 @@ VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $title, $description, $language, $code);
 
         if ($stmt->execute()) {
-            $message = "Successfully uploaded";
+            echo "<h1>Successfully uploaded</h1>";
+            ?>
+    
+            <!-- JavaScript countdown for the redirect -->
+            <script>
+            var countDownDate = new Date().getTime() + 4000; 
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+              // Get the current time
+              var now = new Date().getTime();
+              
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+              
+              // Calculate time remaining in seconds
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+              // print the time remaining
+              document.getElementById("countdown").innerHTML = "Redirecting automatically to Your projects in " + seconds + " seconds...";
+              
+              // when the countdown hits 0 it will redirect to projects.php
+              if (distance < 0) {
+                clearInterval(x);
+                window.location.href = "projects.php";
+              }
+            }, 1000);
+            </script>
+            
+            <div id="countdown">Redirecting automatically to Your projects in 3 seconds...</div>
+            <?php
         } else {
             $message = "Error, something went wrong:" . $mysqli->error;
         }
@@ -54,9 +85,4 @@ VALUES (?, ?, ?, ?)");
         $mysqli->close();
     }
 }
-
-if (isset($message)) : ?>
-    <p><?php echo "<h1>" . $message; "<br>";
-    header( "refresh:2;url=projects.php" );
-        ?></p>
-<?php endif; ?>
+?>

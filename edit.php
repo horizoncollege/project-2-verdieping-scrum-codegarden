@@ -46,9 +46,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     // set message to display on projects.php
     echo "<h1>Record updated successfully</h1>";
+    ?>
     
-    // redirect to projects.php after 2 seconds
-    header("refresh:2;url=projects.php");
+    <!-- JavaScript countdown for the redirect -->
+    <script>
+    var countDownDate = new Date().getTime() + 4000; 
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get the current time
+      var now = new Date().getTime();
+      
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      
+      // Calculate time remaining in seconds
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // print the time remaining
+      document.getElementById("countdown").innerHTML = "Redirecting automatically to Your projects in " + seconds + " seconds...";
+      
+      // when the countdown hits 0 it will redirect to projects.php
+      if (distance < 0) {
+        clearInterval(x);
+        window.location.href = "projects.php";
+      }
+    }, 1000);
+    </script>
+    
+    <div id="countdown">Redirecting automatically to Your projects in 3 seconds...</div>
+    <?php
 
   } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
