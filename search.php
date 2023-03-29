@@ -25,21 +25,19 @@
         <div class="container" style="margin-bottom: 75px">
             <h3 class="recent"> Search </h3>
             <div class="search">
-                <div class="Searchbar">
-                    <form method="post" action="search.php">
-                        <input class="Searchbar" style="margin-bottom: 25px" type="text" name="search" placeholder="Type here">
-                        <button>
-                            <div class="svg-wrapper-1">
-                                <div class="svg-wrapper">
-                                    <svg height="24" width="24" viewBox="0 0 24 24">
-                                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
-                                    </svg>
-                                </div>
+                <form method="post" action="search.php">
+                    <input class="Searchbar" style="margin-bottom: 25px" type="text" name="search" placeholder="Type here">
+                    <button>
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg height="24" width="24" viewBox="0 0 24 24">
+                                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                                </svg>
                             </div>
-                            <span>Submit</span>
-                        </button>
-                    </form>
-                </div>
+                        </div>
+                        <span>Submit</span>
+                    </button>
+                </form>
             </div>
         </div>
 
