@@ -40,8 +40,15 @@
         <!-- Search Upload Share -->
         <div class="container-fluid">
 
-            <div class="search">
-                <input class="Searchbar" type="text" placeholder="Search..."></input>
+        <div class="search">
+                <a href="search.php" class="ShareUpload" alt="SEARCH">
+                    <i>S</i>
+                    <i>E</i>
+                    <i>A</i>
+                    <i>R</i>
+                    <i>C</i>
+                    <i>H</i>
+                </a>
             </div>
             <div class="search">
                 <a href="Upload.php" class="ShareUpload" alt="UPLOAD">
