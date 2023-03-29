@@ -40,6 +40,16 @@
         echo "Connection failed: " . $e->getMessage();
     }
  ?>
+
+ <style>
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    </style>
     <div class="body2">
         <h1 class="recent"> Your projects </h1>
 
@@ -49,7 +59,7 @@
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="projects row mt-4">
 
             <?php
 
@@ -66,9 +76,9 @@
                         echo "<div class='col-sm-3'>";
                         echo "<div class='container'>";
                         echo "<table style='display: flex; flex-direction:column;'>";
-                        echo $row['Title'] . "<br>" . PHP_EOL;
-                        echo $row['Language'] . "<br>" . PHP_EOL;
-                        echo "<textarea max-length='10'>" . $row['Description'] . "</textarea>" . PHP_EOL;
+                        echo $row['Title'] . "<br>";
+                        echo $row['Language'] . "<br>";
+                        echo "<textarea max-length='10' style='width:200px; font-size:20px; margin-right:200px;'>" . $row['Description'] . "</textarea>" . PHP_EOL;
                         echo "<a class='UploadBut' type='button' style='width:200px; height:auto; text-align:center;' value='Open' href='projectopen.php?id=$welk'>Open</a>";
                         echo "</table>";
                         echo "</div>";

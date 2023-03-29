@@ -15,19 +15,19 @@
   </head>
 
 <body>
-<?php
-    
-    session_start();
+  <?php
 
-    // check if the user is logged in
-    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
-    } else {
-        // user is not logged in, redirect to login.php
-        echo "You are not logged in. Redirecting to login page...";
-        header("Location: login.php");
-        exit;
-    }
-    ?>
+  session_start();
+
+  // check if the user is logged in
+  if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+  } else {
+    // user is not logged in, redirect to login.php
+    echo "You are not logged in. Redirecting to login page...";
+    header("Location: login.php");
+    exit;
+  }
+  ?>
   <style>
     .container {
       display: flex;
@@ -118,8 +118,10 @@
   }
 
   $welk = $_GET['id'];
+$_SESSION['welk'] = $welk;
 
-  $sql = "SELECT * FROM private WHERE id=$welk";
+  $sql = "SELECT * FROM private WHERE id='$welk'";
+
   ?>
 
   <div class="body2">
@@ -130,7 +132,7 @@
     <!-- inputs for upload -->
     <div class="UploadInputs">
       <!-- connecting to insert.php -->
-      <form action="insert.php" method="POST">
+      <form action="edit.php" method="POST">
         <div class="search">
           <div class="InputUpload">
 
@@ -140,11 +142,12 @@
               // echo "<input id='Title' name='Title' class='Searchbar' type='text' maxlength='30' placeholder='$title' required></input>";
               foreach ($conn->query($sql) as $row) {
                 $welk = $row['id'];
-                echo "<table style='display: flex; flex-direction:column; width: 2000px;'>";
-                echo "<h1> Title: " . $row['Title'] . "<br><br>" . PHP_EOL;
-                echo "Language: " .$row['Language'] . "</h1> <br>" . PHP_EOL;
-                echo "<h1>Description: </h1><textarea class='Searchbar' style='width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;'>" . $row['Description'] . "</textarea>" . PHP_EOL;
-                echo "<div class='d-flex' style=''><textarea class='form-control flex-grow-1' style='background-color:#282a3a; color:white;' cols='100' rows='15'> " . $row['Code'] . "</textarea></div>" . PHP_EOL;
+
+                echo "<input id='replacetitle' name='replacetitle' class='Searchbar' placeholder='" . $row['Title'] . "' required></input<br><br>";
+                echo "<input id='replacelanguage' name='replacelanguage' class='Searchbar' placeholder='" . $row['Language'] . "'required></input<br><br>";
+                echo "<p>Description: </p><textarea id='replacedescription' name='replacedescription' class='Searchbar' style='width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;'>" . $row['Description'] . "</textarea>";
+                echo "<textarea id='replacecode' name='replacecode' class='form-control flex-grow-1' style='background-color:#282a3a; color:white; max-width:75%; display:flex; justify-content:center; align-items:center;' spellcheck='false' cols='100' rows='15'> " . $row['Code'] . "</textarea>";
+
                 echo "<br><button>
                   <div class='svg-wrapper-1'>
                     <div class='svg-wrapper'>
@@ -155,54 +158,23 @@
                   </div>
                   <span>Upload</span>
                 </button>";
-                echo "</table>";
-                echo "</div>";
-                echo "</div>";
               }
               ?>
             </div>
 
             <br>
           </div>
-          <div class="search">
-            <a href="share.php" class="ShareUpload" alt="SHARE">
-              <i>S</i>
-              <i>H</i>
-              <i>A</i>
-              <i>R</i>
-              <i>E</i>
-            </a>
-          </div>
+
           <br>
-          <div class="search">
-            <a class="ShareUpload" alt="PUBLIC ------ PRIVATE">
-              <i>P</i>
-              <i>U</i>
-              <i>B</i>
-              <i>L</i>
-              <i>I</i>
-              <i>C</i>
-              <i>&nbsp;</i>
-              <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-              </label>
-              <i>&nbsp;</i>
-              <i>P</i>
-              <i>R</i>
-              <i>I</i>
-              <i>V</i>
-              <i>A</i>
-              <i>T</i>
-              <I>E</i>
-            </a>
-          </div>
+
           <br>
         </div>
     </div>
   </div>
   <!-- print footer -->
-  <?php include("footer.php"); ?>
+  <?php include("footer.php");
+
+  ?>
 </body>
 
 </html>
