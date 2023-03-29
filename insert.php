@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$title || !$language || !$code) {
         $message = "Please fill in all required fields";
     } else {
-
+        $code= htmlspecialchars($code, ENT_QUOTES);
 
         // connecting the database
         $host = 'localhost';
