@@ -18,7 +18,7 @@ session_start();
 // check if the user is already logged in
 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     // user is already logged in, redirect to index.php
-    header("Location: http://localhost/project-2-verdieping-scrum-codegarden/index.php");
+    header("Location: http://localhost/PERIODE%203/project-2-verdieping-scrum-codegarden/index.php");
     exit;
 }
 
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_id'] = $user_id;
 
         // redirect to the index page
-        header("Location: http://localhost/project-2-verdieping-scrum-codegarden/index.php");
+        header("Location: http://localhost/PERIODE%203/project-2-verdieping-scrum-codegarden/index.php");
         exit;
     } else {
         // invalid login credentials

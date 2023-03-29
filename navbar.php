@@ -12,6 +12,7 @@
     <title>Navbar</title>
 
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-green" id="headerNav">
         <div class="container-fluid">
@@ -29,6 +30,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-2 active" href="projects.php">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" href="search.php">Search</a>
                     </li>
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link mx-2" href="index.php">
