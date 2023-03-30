@@ -18,7 +18,7 @@ session_start();
 // check if the user is already logged in
 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     // user is already logged in, redirect to index.php
-    header("Location: http://localhost/PERIODE%203/project-2-verdieping-scrum-codegarden/index.php");
+    header("Location: C:\Users\Abbi\Desktop\bit-academy\project-2-verdieping-scrum-codegarden/index.php");
     exit;
 }
 

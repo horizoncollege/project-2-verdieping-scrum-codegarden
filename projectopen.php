@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Edit</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css"
+        id="theme">
+    <script>
+        window.onload = function () {
+            var code = document.getElementById("code");
+            hljs.highlightBlock(code);
+        };
+        function updateTheme(theme) {
+            document.getElementById("theme").href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/" + theme + ".min.css";
+        }
+    </script>
   </head>
 
 <body>
@@ -137,6 +149,19 @@ $_SESSION['welk'] = $welk;
           <div class="InputUpload">
 
             <div class="yourding">
+
+            <select onchange="updateTheme(this.value)">
+        <option value="default">default</option>
+        <option value="a11y-dark">a11y-dark</option>
+        <option value="atom-one-dark">atom-one-dark</option>
+        <option value="rainbow">rainbow</option>
+        <option value="vs">vs</option>
+    </select>
+    <pre id="code">
+    function hello() {
+      console.log("Hello, world!");
+    }
+</pre>
               <?php
 
               // echo "<input id='Title' name='Title' class='Searchbar' type='text' maxlength='30' placeholder='$title' required></input>";
