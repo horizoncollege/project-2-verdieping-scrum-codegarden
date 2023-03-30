@@ -46,30 +46,35 @@
             <h3 class="recent"> Results </h3>
             <div class="search">
                 <p> <?php
-                    error_reporting(0);
                     // connect to the database
                     $host = 'localhost'; // your database host
                     $username = 'bit_academy'; // your database username
                     $password = 'bit_academy'; // your database password
                     $database = 'codegarden'; // your database name
-                    $conn = mysqli_connect($host, $username, $password, $database);
+                    $dsn = "mysql:host=$host;dbname=$database";
 
-                    // check connection
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
+                    try {
+                        $conn = new PDO($dsn, $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    } catch (PDOException $e) {
+                        die("Connection failed: " . $e->getMessage());
                     }
 
                     // get the search term from the form
-                    $searchTerm = mysqli_real_escape_string($conn, $_POST['search']);
+                    $searchTerm = isset($_POST['search']) ? $_POST['search'] : '';
+
 
                     // query the database
-                    $sql = "SELECT * FROM `public` WHERE `Title` LIKE '%$searchTerm%'";
-                    $result = mysqli_query($conn, $sql);
+                    $sql = "SELECT * FROM `public` WHERE `Title` LIKE :searchTerm";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bindValue(':searchTerm', "%$searchTerm%", PDO::PARAM_STR);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     // check if any rows were returned
-                    if (mysqli_num_rows($result) > 0) {
+                    if (count($result) > 0) {
                         // loop through each row and display the results
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        foreach ($result as $row) {
                             echo $row['Title'] . '<br>';
                         }
                     } else {
@@ -77,8 +82,9 @@
                     }
 
                     // close the database connection
-                    mysqli_close($conn);
-                    ?></p>
+                    $conn = null;
+                    ?>
+
             </div>
         </div>
 
