@@ -183,9 +183,9 @@
   <?php include("footer.php"); 
   
   // checking if the code needs to be public
-if (isset($_POST['checkbox']) && $_POST['checkbox'] == 'on') {
-    $_SESSION['public'] = true;
-}
+  if (isset($_POST['checkbox']) && $_POST['checkbox'] == 'on') {
+    $_SESSION['public'] == true;
+  }
   ?>
 
 </body>

@@ -1,5 +1,4 @@
 <?php
-
 // start the session
 session_start();
 
@@ -12,9 +11,6 @@ if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
     exit;
 }
 
-if (isset($_SESSION['public'])) {
-    $public = $_SESSION['public'];
-}
 // getting the inputs from upload.php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = isset($_POST['Title']) ? $_POST['Title'] : null;
@@ -26,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!$title || !$language || !$code) {
         $message = "Please fill in all required fields";
     } else {
-        
+
         // $code = htmlspecialchars($code, ENT_QUOTES);
 
         // connecting the database
@@ -42,20 +38,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Verbinding mislukt: " . $e->getMessage());
         }
 
-        if (isset($public) && $public == true) {
+        if (isset($_SESSION['public'])) {
             $stmt = $pdo->prepare("INSERT INTO public (Title, Description, Language, Code) VALUES (?, ?, ?, ?)");
             $stmt->execute([$title, $description, $language, $code]);
         }
 
-        // query to insert into database
         $stmt = $pdo->prepare("INSERT INTO private (Title, Description, Language, Code) VALUES (?, ?, ?, ?)");
-
         $stmt->execute([$title, $description, $language, $code]);
 
         if ($stmt->rowCount() > 0) {
             echo "<h1>Successfully uploaded</h1>";
 ?>
-
             <!-- JavaScript countdown for the redirect -->
             <script>
                 var countDownDate = new Date().getTime() + 4000;
