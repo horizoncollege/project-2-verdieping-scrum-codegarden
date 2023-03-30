@@ -78,8 +78,8 @@
                         echo "<table style='display: flex; flex-direction:column;'>";
                         echo $row['Title'] . "<br>";
                         echo $row['Language'] . "<br>";
-                        echo "<textarea max-length='10' style='width:200px; font-size:20px; margin-right:200px;'>" . $row['Description'] . "</textarea>" . PHP_EOL;
-                        echo "<a class='UploadBut' type='button' style='width:200px; height:auto; text-align:center;' value='Open' href='projectopen.php?id=$welk'>Open</a>";
+                        echo "<textarea max-length='10' style='width:200px; font-size:20px; margin-right:200px;' disabled>" . $row['Description'] . "</textarea>" . PHP_EOL;
+                        echo "<a class='UploadBut' type='button' style='text-decoration:none; width:200px; height:auto; text-align:center;' value='Open' href='projectopen.php?id=$welk'>Open</a>";
                         echo "</table>";
                         echo "</div>";
                         echo "</div>";
