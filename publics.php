@@ -67,7 +67,7 @@
                         echo "<h5 class='card-title'>" . $row['Title'] . "</h5>";
                         echo "<p class='card-text'>" . $row['Language'] . "</p>";
                         echo "<textarea class='form-control mb-3' rows='3' disabled>" . $row['Description'] . "</textarea>";
-                        echo "<a class='btn btn-success' href='publicsopen.php?id=$welk'>Open</a>";
+                        echo "<a class='btn btn-success' href='publicopen.php?id=$welk'>Open</a>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
