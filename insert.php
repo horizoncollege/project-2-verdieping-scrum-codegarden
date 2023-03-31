@@ -1,7 +1,7 @@
 <?php
 // start the session
 session_start();
-print_r($_POST);
+
 // checking if the code needs to be public
 if (isset($_POST['checkbox']) && $_POST['checkbox'] == 'on') {
     $_SESSION['public'] = true;
