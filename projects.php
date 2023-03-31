@@ -46,7 +46,7 @@
 
         <div class="container">
             <div class="search">
-                <input class="Searchbar" type="text" style="margin-bottom:50px" placeholder="Search your projects..."></input>
+                <input class="Searchbar" type="text" style="margin-bottom:50px" placeholder="Search your projects...">
             </div>
         </div>
 
@@ -59,8 +59,6 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <?php
-                    $title = "";
-                    $sql = "SELECT * FROM private";
                     foreach ($conn->query($sql) as $row) {
                         $welk = $row['id'];
                         echo "<div class='col-12 col-md-6 col-lg-4 mb-3'>";
@@ -79,8 +77,8 @@
             </div>
         </div>
 
-        <!-- contactlink -->
-        <?php include("contactlink.php"); ?>
+    <!-- contactlink -->
+    <?php include("contactlink.php"); ?>
     </div>
 
     <!-- Optional JavaScript -->
