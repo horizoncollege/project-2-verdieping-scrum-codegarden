@@ -150,119 +150,41 @@ $_SESSION['welk'] = $welk;
 
             <div class="yourding">
 
-            <select onchange="updateTheme(this.value)">
-        <option value="default">default</option>
-        <option value="a11y-dark">a11y-dark</option>
-        <option value="atom-one-dark">atom-one-dark</option>
-        <option value="rainbow">rainbow</option>
-        <option value="vs">vs</option>
-    </select>
-    <pre id="code">
-    -- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Gegenereerd op: 24 mrt 2023 om 09:44
--- Serverversie: 10.4.27-MariaDB
--- PHP-versie: 8.2.0
+           
+            <?php
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+foreach ($conn->query($sql) as $row) {
+  $welk = $row['id'];
 
+  echo "<input id='replacetitle' name='replacetitle' class='Searchbar' placeholder='" . $row['Title'] . "' disabled></input<br><br>";
+  echo "<input id='replacelanguage' name='replacelanguage' class='Searchbar' placeholder='" . $row['Language'] . "'disabled></input><br><br>";
+  echo "<p>Description: </p><textarea id='replacedescription' name='replacedescription' class='Searchbar' style='width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;'>" . $row['Description'] . "</textarea>";
+ 
+?>
+  <select onchange="updateTheme(this.value)">
+    <option value="default">default</option>
+    <option value="a11y-dark">a11y-dark</option>
+    <option value="atom-one-dark">atom-one-dark</option>
+    <option value="rainbow">rainbow</option>
+    <option value="vs">vs</option>
+  </select>
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `codegarden`
---
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `private`
---
-
-CREATE TABLE `private` (
-  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `Title` varchar(30) NOT NULL,
-  `Description` varchar(300) NOT NULL,
-  `Language` varchar(30) NOT NULL,
-  `Code` longblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `public`
---
-
-CREATE TABLE `public` (
-  `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `Title` varchar(30) NOT NULL,
-  `Description` varchar(300) NOT NULL,
-  `Language` varchar(30) NOT NULL,
-  `Code` longblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `users`
---
-
-DROP TABLE IF EXISTS `users`;
-
-CREATE TABLE `users` (
-  `id` mediumint(9) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Indexen voor geëxporteerde tabellen
---
-
---
--- Indexen voor tabel `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT voor geëxporteerde tabellen
---
-
---
--- AUTO_INCREMENT voor een tabel `users`
---
-ALTER TABLE `users`
-  MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-</pre>
-              <?php
-
-              // echo "<input id='Title' name='Title' class='Searchbar' type='text' maxlength='30' placeholder='$title' required></input>";
-              foreach ($conn->query($sql) as $row) {
-                $welk = $row['id'];
-
-                echo "<input id='replacetitle' name='replacetitle' class='Searchbar' placeholder='" . $row['Title'] . "' disabled></input<br><br>";
-                echo "<input id='replacelanguage' name='replacelanguage' class='Searchbar' placeholder='" . $row['Language'] . "'disabled></input<br><br>";
-                echo "<p>Description: </p><textarea id='replacedescription' name='replacedescription' class='Searchbar' style='width: 400px; height: 150px; resize:vertical; max-height:750px; min-height:150px;' disabled>" . $row['Description'] . "</textarea>";
-                echo "<textarea id='replacecode' name='replacecode' class='form-control flex-grow-1' style='background-color:#282a3a; color:white; max-width:75%; display:flex; justify-content:center; align-items:center;' spellcheck='false' cols='100' rows='15' disabled> " . $row['Code'] . "</textarea>";
-
-                
-              }
-              ?>
+<?php
+  echo "<pre id='code'>";
+  echo $row['Code'];
+  echo "</pre>";
+  echo "<br><button>
+    <div class='svg-wrapper-1'>
+      <div class='svg-wrapper'>
+        <svg height='24' width='24' viewBox='0 0 24 24'>
+          <path d='M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z' fill='currentColor'></path>
+        </svg>
+      </div>
+    </div>
+    <span>Upload</span>
+  </button>";
+}
+?>
             </div>
 
             <br>
