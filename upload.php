@@ -150,7 +150,7 @@
             <I>E</i>
             <i>&nbsp;</i>
             <label class="switch">
-              <input id="checkbox" type="checkbox" checked>
+              <input id="checkbox" name="checkbox" value="on" type="checkbox" checked>
               <span class="slider round"></span>
             </label>
             <i>&nbsp;</i>
@@ -182,10 +182,7 @@
   <!-- print footer -->
   <?php include("footer.php"); 
   
-  // checking if the code needs to be public
-  if (isset($_POST['checkbox']) && $_POST['checkbox'] == 'on') {
-    $_SESSION['public'] == true;
-  }
+  
   ?>
 
 </body>

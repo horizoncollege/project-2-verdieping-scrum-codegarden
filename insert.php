@@ -1,6 +1,13 @@
 <?php
 // start the session
 session_start();
+print_r($_POST);
+// checking if the code needs to be public
+if (isset($_POST['checkbox']) && $_POST['checkbox'] == 'on') {
+    $_SESSION['public'] = true;
+  } else {
+    $_SESSION['public'] = false;
+  }
 
 // check if the user is logged in
 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
@@ -17,6 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $language = isset($_POST['Language']) ? $_POST['Language'] : null;
     $description = isset($_POST['Description']) ? $_POST['Description'] : null;
     $code = isset($_POST['Code']) ? $_POST['Code'] : null;
+
+    if ($_SESSION['public'] == true) {
+        $public = true;
+    } else {
+        $public = false;
+    }
 
     // check if required fields are set
     if (!$title || !$language || !$code) {
@@ -38,16 +51,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Verbinding mislukt: " . $e->getMessage());
         }
 
-        if (isset($_SESSION['public'])) {
+        // if $public is true execute statement to insert data into public and private
+        if ($public == true) {
             $stmt = $pdo->prepare("INSERT INTO public (Title, Description, Language, Code) VALUES (?, ?, ?, ?)");
             $stmt->execute([$title, $description, $language, $code]);
-        }
-
-        $stmt = $pdo->prepare("INSERT INTO private (Title, Description, Language, Code) VALUES (?, ?, ?, ?)");
+            if ($stmt->rowCount() > 0) {
+                echo "<h1>public Successfully uploaded</h1>";
+            }
+        } 
+ $stmt = $pdo->prepare("INSERT INTO private (Title, Description, Language, Code) VALUES (?, ?, ?, ?)");
         $stmt->execute([$title, $description, $language, $code]);
-
         if ($stmt->rowCount() > 0) {
-            echo "<h1>Successfully uploaded</h1>";
+            echo "<h1>private Successfully uploaded</h1>";
 ?>
             <!-- JavaScript countdown for the redirect -->
             <script>
@@ -79,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="countdown">Redirecting automatically to Your projects in 3 seconds...</div>
 <?php
         } else {
+            // if something went wrong
             $message = "Error, something went wrong";
         }
 
