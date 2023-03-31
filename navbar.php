@@ -29,10 +29,10 @@
                         <a class="nav-link mx-2 active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" href="projects.php">Projects</a>
+                        <a class="nav-link mx-2 active" href="search.php">Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" href="search.php">Search</a>
+                        <a class="nav-link mx-2 active" href="projects.php">Projects</a>
                     </li>
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link mx-2" href="index.php">
