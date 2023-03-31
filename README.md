@@ -13,3 +13,14 @@ Welcome to CodeGarden, the Fertile Ground for Code! Our website makes it easy fo
 3. Share. After the code is stored in the database, you will be given the option to share your code with others. There is a button labeled "Share". After pressing it, you will be directed to a page called "share.php". There, a generated link will be given to you. You can share this link with others by pressing the "copy" button and pasting it anywhere you like.
 
 4. Browse your own and others code. On this page, you will find either your own projects or projects from other users who have made their project public for other users. If you press the "open" button, you will be directed to a new page where you can read, edit and share the code. 
+
+
+
+Thing we wanted to include but haven't gotten the time for.
+
+1. The searchbar: We wanted to make it more elaborate, but we didn't have the time for it. We also wanted to add filters so you can search for code language like HTML, CSS, JavaScript, PHP and SQL.
+
+2. The linkgenerator. We don't own the codegarden domain name. So couldn't add a working link for the projects.
+
+3. The upload page. We 
+
