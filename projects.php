@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<?php
+    <?php
     // start the session
     session_start();
 
@@ -39,68 +39,55 @@
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
- ?>
+    ?>
 
- <style>
-.projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-    </style>
     <div class="body2">
         <h1 class="recent"> Your projects </h1>
 
         <div class="container">
             <div class="search">
-                <input class="Searchbar" type="text" placeholder="Search your projects..."></input>
+                <input class="Searchbar" type="text" style="margin-bottom:50px" placeholder="Search your projects..."></input>
             </div>
         </div>
 
-        <div class="projects row mt-4">
-
+        <div class="projects">
             <?php
-
             $title = "";
-
             $sql = "SELECT * FROM private";
             ?>
 
-            <h1>
-                <div class="col-sm-3">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
                     <?php
+                    $title = "";
+                    $sql = "SELECT * FROM private";
                     foreach ($conn->query($sql) as $row) {
                         $welk = $row['id'];
-                        echo "<div class='col-sm-3'>";
-                        echo "<div class='container'>";
-                        echo "<table style='display: flex; flex-direction:column;'>";
-                        echo $row['Title'] . "<br>";
-                        echo $row['Language'] . "<br>";
-                        echo "<textarea max-length='10' style='width:200px; font-size:20px; margin-right:200px;' disabled>" . $row['Description'] . "</textarea>" . PHP_EOL;
-                        echo "<a class='UploadBut' type='button' style='text-decoration:none; width:200px; height:auto; text-align:center;' value='Open' href='projectopen.php?id=$welk'>Open</a>";
-                        echo "</table>";
+                        echo "<div class='col-12 col-md-6 col-lg-4 mb-3'>";
+                        echo "<div class='card'>";
+                        echo "<div class='card-body'>";
+                        echo "<h5 class='card-title'>" . $row['Title'] . "</h5>";
+                        echo "<p class='card-text'>" . $row['Language'] . "</p>";
+                        echo "<textarea class='form-control mb-3' rows='3' disabled>" . $row['Description'] . "</textarea>";
+                        echo "<a class='btn btn-success' href='projectopen.php?id=$welk'>Open</a>";
+                        echo "</div>";
                         echo "</div>";
                         echo "</div>";
                     }
                     ?>
                 </div>
-            </h1>
-
+            </div>
         </div>
+
         <!-- contactlink -->
         <?php include("contactlink.php"); ?>
     </div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 
     <!-- footer -->
     <?php include("footer.php"); ?>
