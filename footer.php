@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Footer. doormiddel van includes plaatsen we deze op de pagina's. -->
+<!-- With includes we put the footer on every wbesite. -->
 <footer class="footer">
     <ul>
 
@@ -13,7 +13,7 @@
         <a class="contactknop" href="contact.php" target="_blank">Contact</a></li>
         
 
-        <!-- dit zijn de klikbare afbeeldingen naar de sociale media van het horizon college -->
+        <!-- When you click the images in the footer, you will be directed to social media platforms of Horizon College -->
         <div class="allsocials">
             <li><a class="social" href="#" onclick='window.open("https://twitter.com/intent/tweet?text=https://www.horizoncollege.nl");return false;'><img class="logo" src="pictures/twitter.png" alt="twitter"></a></li>
             <li><a class="social" href="#" onclick='window.open("https://www.facebook.com/sharer/sharer.php?u=https://www.horizoncollege.nl");return false;'><img class="logo" src="pictures/facebook.png" alt="facebook"></a></li>

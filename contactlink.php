@@ -36,7 +36,7 @@
             </div>
             <br>
     </div>
-    <!-- VRAGEN OF OPMERKINGEN & BUTTON -->
+    <!-- QUESTIONS OR REMARKS & BUTTON -->
 </body>
 
 </html>

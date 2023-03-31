@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 24 mrt 2023 om 09:44
--- Serverversie: 10.4.27-MariaDB
--- PHP-versie: 8.2.0
+-- Generated at: 24 mrt 2023 at 09:44
+-- Serverversion: 10.4.27-MariaDB
+-- PHP-version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `private`
+-- Tablestructure for table `private`
 --
 
 CREATE TABLE `private` (
@@ -38,7 +38,7 @@ CREATE TABLE `private` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `public`
+-- Tabelestructure for table `public`
 --
 
 CREATE TABLE `public` (
@@ -52,7 +52,7 @@ CREATE TABLE `public` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `users`
+-- Tablestructure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -64,21 +64,21 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexen voor geëxporteerde tabellen
+-- Index for exported tables
 --
 
 --
--- Indexen voor tabel `users`
+-- Index for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT voor geëxporteerde tabellen
+-- AUTO_INCREMENT for exported tables
 --
 
 --
--- AUTO_INCREMENT voor een tabel `users`
+-- AUTO_INCREMENT for a table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT;
