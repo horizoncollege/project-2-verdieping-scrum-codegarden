@@ -65,8 +65,6 @@
                 <!-- contactlink -->
                 <?php include("contactlink.php"); ?>
 
-                <!-- Footer -->
-                <?php include("footer.php"); ?>
             </div>
         </div>
 
